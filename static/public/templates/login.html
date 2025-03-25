@@ -3,7 +3,7 @@
 
 <section class="login">
 	<h2>{{ .L.T "users.login"}}</h2>
-	{{ if .Data.PasswordEnabled }}
+	{{ if not .Data.OIDCProvider }}
 	<form method="post" action="/admin/login" class="form">
 		<div>
 			<input type="hidden" name="nonce" value="{{ .Data.Nonce }}" />
@@ -30,9 +30,9 @@
 			<input type="hidden" name="nonce" value="{{ .Data.Nonce }}" />
 			<input type="hidden" name="next" value="{{ .Data.NextURI }}" />
 			<p><button class="button button-outline" type="submit">
-				<img src="{{ .RootURL }}/public/static/auth/{{ .Data.OIDCProviderLogo }}" alt="" />
-				{{ .L.Ts "users.loginOIDC" "name" .Data.OIDCProvider }}
-			</button></p>
+					<img src="{{ .RootURL }}/public/static/auth/{{ .Data.OIDCProviderLogo }}" alt="" />
+					{{ .L.Ts "users.loginOIDC" "name" .Data.OIDCProvider }}
+				</button></p>
 		</div>
 	</form>
 	{{ end }}
