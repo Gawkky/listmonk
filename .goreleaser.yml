@@ -9,7 +9,8 @@ before:
     - make build-frontend
 
 builds:
-  - binary: listmonk
+  - id: listmonk
+    binary: listmonk
     main: ./cmd
     goos:
       - linux
