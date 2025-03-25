@@ -2,7 +2,7 @@ env:
   - GO111MODULE=on
   - CGO_ENABLED=0
   - GITHUB_ORG=herentals-fietst-feest
-  - DOCKER_ORG=herentals-fietst-feest
+  - DOCKER_ORG=reg.jeftheeuwes.me
 
 before:
   hooks:
