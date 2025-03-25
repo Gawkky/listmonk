@@ -40,6 +40,7 @@ dockers:
     ids:
       - listmonk
     image_templates:
+      - "{{ .Env.DOCKER_ORG }}/{{ .ProjectName }}:latest"
       - "{{ .Env.DOCKER_ORG }}/{{ .ProjectName }}:latest-amd64"
       - "{{ .Env.DOCKER_ORG }}/{{ .ProjectName }}:{{ .Tag }}-amd64"
     build_flag_templates:
