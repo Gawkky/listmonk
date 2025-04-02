@@ -295,7 +295,6 @@
     "media.errorSavingThumbnail": "Грешка при запазване на миниатюра: {error}",
     "media.errorUploading": "Грешка при качване на файл: {error}",
     "media.invalidFile": "Невалиден файл: {error}",
-    "media.invalidFileName": "Невалидно име на файл {name}. Използвайте само ASCII символи",
     "media.title": "Медия",
     "media.unsupportedFileType": "Неподдържан тип файл ({type})",
     "media.upload": "Качване",
@@ -506,6 +505,8 @@
     "settings.privacy.allowPrefsHelp": "Разрешаване на абонатите да променят предпочитанията си, като например техните имена и множество абонаменти за списъци.",
     "settings.privacy.allowWipe": "Разрешаване на изтриване",
     "settings.privacy.allowWipeHelp": "Разрешаване на абонатите да изтриват себе си, включително техните абонаменти и всички други данни от базата данни. Прегледите на кампаниите и кликовете върху връзките също се премахват, докато броят на прегледите и кликовете остава (без абонат, свързан с тях), така че статистиката и анализите да не бъдат засегнати.",
+    "settings.privacy.domainAllowlist": "Domain allowlist",
+    "settings.privacy.domainAllowlistHelp": "Only e-mail addresses with these domains are allowed to subscribe. Enter one domain per line, eg: example.com, *.example.com",
     "settings.privacy.domainBlocklist": "Черен списък на домейни",
     "settings.privacy.domainBlocklistHelp": "Имейл адреси с тези домейни не могат да се абонират. Въведете по един домейн на ред, напр.: somesite.com",
     "settings.privacy.individualSubTracking": "Индивидуално проследяване на абонати",
@@ -641,4 +642,3 @@
     "users.username": "Потребителско име",
     "users.usernameHelp": "Използва се с вход с парола"
 }
-    
