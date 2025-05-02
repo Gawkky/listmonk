@@ -9,7 +9,7 @@ DROP TYPE IF EXISTS bounce_type CASCADE; CREATE TYPE bounce_type AS ENUM ('soft'
 DROP TYPE IF EXISTS template_type CASCADE; CREATE TYPE template_type AS ENUM ('campaign', 'campaign_visual', 'tx');
 DROP TYPE IF EXISTS user_type CASCADE; CREATE TYPE user_type AS ENUM ('user', 'api');
 DROP TYPE IF EXISTS user_status CASCADE; CREATE TYPE user_status AS ENUM ('enabled', 'disabled');
-DROP TYPE IF EXISTS role_type CASCADE; CREATE TYPE role_type AS ENUM ('user', 'list');
+DROP TYPE IF EXISTS role_type CASCADE; CREATE TYPE role_type AS ENUM ('user', 'list', 'messenger');
 
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
 
@@ -314,6 +314,7 @@ CREATE TABLE roles (
     type             role_type NOT NULL DEFAULT 'user',
     parent_id        INTEGER NULL REFERENCES roles(id) ON DELETE CASCADE ON UPDATE CASCADE,
     list_id          INTEGER NULL REFERENCES lists(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    messenger_id     INTEGER NULL REFERENCES messengers(id) ON DELETE CASCADE ON UPDATE CASCADE,
     permissions      TEXT[] NOT NULL DEFAULT '{}',
     name             TEXT NULL,
     created_at       TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
