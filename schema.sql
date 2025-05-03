@@ -314,7 +314,6 @@ CREATE TABLE roles (
     type             role_type NOT NULL DEFAULT 'user',
     parent_id        INTEGER NULL REFERENCES roles(id) ON DELETE CASCADE ON UPDATE CASCADE,
     list_id          INTEGER NULL REFERENCES lists(id) ON DELETE CASCADE ON UPDATE CASCADE,
-    messenger_id     INTEGER NULL REFERENCES messengers(id) ON DELETE CASCADE ON UPDATE CASCADE,
     permissions      TEXT[] NOT NULL DEFAULT '{}',
     name             TEXT NULL,
     created_at       TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
